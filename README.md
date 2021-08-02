@@ -27,14 +27,17 @@ export PATH=$PATH:/usr/local/sbin
 ```shell
 sudo rabbitmq-server
 ```
-![Alt Text](https://i.imgflip.com/5idg9h.gif)
+<img src="https://i.imgflip.com/5idg9h.gif" width="700" height="400"/>
+<!-- ![Alt Text](https://i.imgflip.com/5idg9h.gif) -->
 
 ## Run Celery as Asynchronous Task Queue
 Make sure that you are currently in **blueface/shoppingcart** folder.
 ```shell
 celery -A app.celery worker --loglevel=info
 ```
-![Alt Text](https://i.imgflip.com/5idhzx.gif)
+
+<img src="https://i.imgflip.com/5idhzx.gif" width="700" height="400"/>
+<!-- ![Alt Text](https://i.imgflip.com/5idhzx.gif) -->
 
 ## Initialize MySQL database
 
@@ -67,7 +70,9 @@ Make sure that you are still in **blueface/shoppingcart** folder.
 ```shell
 python3 -m app
 ```
-![Alt Text](https://i.imgflip.com/5idiy7.gif)
+
+<img src="https://i.imgflip.com/5idiy7.gif" width="700" height="400"/>
+<!-- ![Alt Text](https://i.imgflip.com/5idiy7.gif) -->
 
 Now, you can access shopping cart by visiting [localhost:5000]() from the navigator.
 
