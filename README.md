@@ -82,12 +82,14 @@ class MarketItem(db.Model):
 ### Create Database file:
 
 Make sure that you are in **blueface/shoppingcart** folder.
+
+Only create `text.db` if it is not existed in the project folder.
 ```shell
 python3
 ```
 ```python
-from app import create_db
-create_db()
+from app import db
+db.create_all()
 ```
 
 Add those items in market_item table.

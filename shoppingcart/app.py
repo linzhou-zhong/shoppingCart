@@ -39,11 +39,11 @@ class MarketItem(db.Model):
     price = db.Column(db.Float)
 
 
+db.create_all()
+
 shoppingCart = MyShoppingCart(
     session=db.session, cart_class=Cart, market_class=MarketItem
 )
-
-create_db = db.create_all
 
 
 @app.route("/", methods=["GET", "POST"])
