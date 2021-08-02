@@ -62,7 +62,7 @@ VALUES ('apple', 1.0),
 ```
 A `test.db` file will be generated eventually.
 
-I've already generated `test.db` for this project so you can ignore this part.
+I've already generated `test.db` with all market items for this project so you can ignore this part.
 
 
 ## Run Application
