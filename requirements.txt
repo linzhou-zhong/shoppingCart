@@ -1,9 +1,8 @@
-CurrencyConverter==0.16.3
-pika==1.2.0
-Flask==2.0.1
-Flask-SQLAlchemy==2.5.1
-SQLAlchemy==1.4.22
-alchemy-mock==0.4.3
-celery==5.1.2
-pytest==6.2.4
-forex-python==1.6
+celery
+CurrencyConverter
+Flask
+Flask-SQLAlchemy
+SQLAlchemy
+alchemy-mock
+pytest
+forex-python
