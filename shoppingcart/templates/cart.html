@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block head %}
+
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 align="center"> Blueface Shopping Cart 🛒</h1>
+
+    <form action="/cart" method="POST">
+        <select id="currency_type" name="currency_type" required>
+            <option value=EUR {% if currenyType=="EUR" %} selected="selected"{% endif %}>EUR</option>
+            <option value=USD {% if currenyType=="USD" %} selected="selected"{% endif %}>USD</option>
+            <option value=GBP {% if currenyType=="GBP" %} selected="selected"{% endif %}>GBP</option>
+            <option value=CNY {% if currenyType=="CNY" %} selected="selected"{% endif %}>CNY</option>
+        </select>
+        <input type="submit" value="Convert">
+    </form>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Number</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.quantity }}</td>
+            <td>{{ product.price }} {{ currenyType }}</td>
+            <td>
+<!--                <a href="/update/{{ product.id }}">Update</a>-->
+                <a href="/delete/{{ product.id }}/{{ currenyType }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+
+    <h2> Total: {{ total }} {{ currenyType }}</h2>
+    <form action="/" method="GET">
+        <input type="submit" value="Back">
+    </form>
+
+</div>
+
+
+{% endblock %}
