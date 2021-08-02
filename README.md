@@ -41,6 +41,46 @@ celery -A app.celery worker --loglevel=info
 
 ## Initialize MySQL database
 
+### We have two MySQL tables:
+
+- `Cart`: It contains all items you've added to the shopping cart
+  - **id**: Integer (Primary key)
+  - **name**: String
+  - **quantity**: Integer
+  - **price**: Float
+  - **date_created**: Date
+
+```python
+class Cart(db.Model):
+    """
+    DataBase structure of our shopping cart
+    """
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+    quantity = db.Column(db.Integer)
+    price = db.Column(db.Float)
+    date_created = db.Column(db.DateTime, default=datetime.utcnow())
+```
+
+- `MarketItem`: It contains all items of the market 
+  - **id**: Integer (Primary Key)
+  - **name**: String
+  - **price**: Float
+
+```python
+class MarketItem(db.Model):
+    """
+    DataBase structure of our market stock
+    """
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String)
+    price = db.Column(db.Float)
+```
+
+### Create Database file:
+
 Make sure that you are in **blueface/shoppingcart** folder.
 ```shell
 python3
